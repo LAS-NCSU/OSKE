@@ -21,6 +21,6 @@
   "main": "index.js",
   "dependencies": {
     "d3": "3.x",
-    "canvas": "1.2.x"
+    "canvas": "2.6.x"
   }
 }
