@@ -123,6 +123,7 @@ INSERT INTO domain (domain_instance_name, domain_status, effective_ts, full_name
 '        "title": "News"'
 '    },'
 '    "siteinfoAPI": "http://FULL_DOMAIN_NAME_MICROSERVICES:9007/siteinfo/",'
+'    "googleAPI": "http://FULL_DOMAIN_NAME_MICROSERVICES:9015/",'
 '    "wordnetAPI": {'
 '                "specializedUrl": "http://FULL_DOMAIN_NAME_MICROSERVICES:5679/hyponym/1/",'
 '                "generalizedUrl": "http://FULL_DOMAIN_NAME_MICROSERVICES:5679/hypernym/1/"'

@@ -34,12 +34,12 @@ COPY . /root/install/OpenKE
 RUN mkdir /opt/textAnalysis && \
     mkdir /opt/textAnalysis/gunicorn && \
     cp /root/install/OpenKE/*.py /opt/textAnalysis/ && \
-    cp /root/install/OpenKE/gunicorn/*.conf /opt/textAnalysis/gunicorn && \
+    cp /root/install/OpenKE/gunicorn/* /opt/textAnalysis/gunicorn && \
     rm -rf /root/install /root/.ssh
 
 WORKDIR /opt/textAnalysis
 
 USER 1000
 
-ENTRYPOINT ["/usr/local/bin/gunicorn", "--config", "/opt/textAnalysis/gunicorn/gunicorn.conf", "--log-config", "/opt/textAnalysis/gunicorn/logging.conf", "-b", ":8000", "app:app"]
+ENTRYPOINT ["/usr/local/bin/gunicorn", "--config", "/opt/textAnalysis/gunicorn/gunicorn.conf.py", "--log-config", "/opt/textAnalysis/gunicorn/logging.conf", "-b", ":8000", "app:app"]
 EXPOSE 8000

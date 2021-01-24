@@ -98,15 +98,17 @@ services:
       - openke
 
   dbpedia-service:
-    image: dbpedia/spotlight-english
-    container_name: dbpedia-service
-    command: spotlight.sh
-    restart: always
+    image:  dbpedia/dbpedia-spotlight
+    container_name: dbepdia-service
+    volumes:
+      - spotlight-model:/opt/spotlight
+    restart: unless-stopped
     ports:
-      - 2222:80
-    networks:
+      - "0.0.0.0:2222:80"
+     networks:
       - openke
-
+    command: /bin/spotlight.sh en
+    
   geo-service:
     image: openke_ms_geotag
     container_name: geo-service
@@ -253,3 +255,7 @@ services:
 
 networks:
   openke:
+
+volumes:
+  spotlight-model:
+    external: false

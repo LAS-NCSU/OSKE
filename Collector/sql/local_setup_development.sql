@@ -50,6 +50,7 @@ INSERT INTO domain (domain_instance_name, domain_status, effective_ts, full_name
 '    "nlpAPI": "http://nlp-service:9001/nlp/",'
 '    "microformatAPI": "http://microformat-service:8000/microformat/",'
 '    "dbpediaSpotlightAPI": "http://dbpedia-service:80/rest/annotate",'
+'    "googleAPI": "http://google-service:9015/",'
 '    "graphAPI": "http://graph-service:9001/GraphAPI/",'
 '    "spacyAPI": "http://spacy-service:8000/spacy/",'
 '    "temporalAPI": "http://temporal-service:9001/temporalTagger/v1/",'

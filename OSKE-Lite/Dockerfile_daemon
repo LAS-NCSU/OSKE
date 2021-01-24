@@ -33,7 +33,7 @@ RUN chmod 775 /opt/collector/start.sh && \
     groupadd -g 1000 -r collector && \
     useradd -d /opt/collector -u 1000 -g collector collector
 RUN chown -R collector:collector /openke /opt/collector
-RUN yum install -y https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
+RUN yum install -y https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 RUN yum install -y postgresql10 java
 
 

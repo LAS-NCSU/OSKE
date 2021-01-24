@@ -37,10 +37,11 @@ WhoIS Service | 9008 | Retrieves WhoIS data for a domain
 1. Access the server and install your github private key such that your can access this repository
 1. Execute the following steps to prepare the server and install docker. The "sysctl" line is necessary to run ElasticSearh within docker.  The echo line will make it permanent for any reboots and images. These commands are also available within the file "install_docker.sh".
 ```
-yum install -y yum-utils   device-mapper-persistent-data   lvm2 git
+yum update -y
+yum install -y yum-utils   device-mapper-persistent-data   lvm2 git iptables
 yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
 yum install -y docker-ce
-curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 systemctl enable docker
 systemctl start docker
@@ -55,7 +56,7 @@ docker-compose --version
 4. Clone the software repository
 ```
 cd <your install location>
-git clone git@github.com:NationalSecurityAgency/OSKE.git
+git clone https://github.com/LAS-NCSU/OSKE.git
 ```
 
 5. Setup the data directories

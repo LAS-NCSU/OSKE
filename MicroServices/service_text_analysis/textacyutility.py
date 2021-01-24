@@ -14,9 +14,10 @@ from fuzzywuzzy.fuzz import token_sort_ratio
 import networkx as nx
 import numpy as np
 
-from textacy import extract, spacy_utils
+from textacy import extract
 from textacy import vsm
 from textacy.network import terms_to_semantic_network
+from textacy.spacier import utils as spacy_utils
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
