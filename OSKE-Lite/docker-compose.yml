@@ -99,7 +99,7 @@ services:
 
   dbpedia-service:
     image: dbpedia/dbpedia-spotlight
-    container_name: dbepdia-service
+    container_name: dbpedia-service
     volumes:
       - spotlight-model:/opt/spotlight
     restart: unless-stopped
