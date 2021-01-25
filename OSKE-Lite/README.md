@@ -35,7 +35,7 @@ WhoIS Service | 9008 | Retrieves WhoIS data for a domain
 ## Install
 1. Provision a server.  These instructions assume a CentOS distribution.  sudo privileges are required.  The install requires a minimum of 40 gb of storage and 32 gb of RAM.
 1. Access the server and install your github private key such that your can access this repository
-1. Execute the following steps to prepare the server and install docker. The "sysctl" line is necessary to run ElasticSearh within docker.  The echo line will make it permanent for any reboots and images. These commands are also available within the file "install_docker.sh".
+1. Execute the following steps to prepare the server and install docker. The "sysctl" line is necessary to run ElasticSearh within docker.  The echo line will make it permanent for any reboots and images. These commands are also available within the file "install_docker.sh".  (Note: For Amazon Linux 2, do not add the docker repo, and install docker with "amazon-linux-extras install docker" - lines 3 and 4. Docker Compose will need to be installed as listed.)
 ```
 yum update -y
 yum install -y yum-utils   device-mapper-persistent-data   lvm2 git iptables
@@ -74,7 +74,7 @@ chown  999 oske/database
 
 
 8. In OSKE/Collector/system_properties.json.docker change
-   the parameter for "password" (under "database") from REQUIRED_PASSWORD_CHANGE
+   the parameter for "password" (under "database") from MUST_CHANGE_PASSWORD
    to the same password utilized in the last two steps.
 
 9. Start the system.  This step will take well over 30 minutes to execute the first time as the docker images are downloaded and built.  Once the images are available(built) and for subsequent runs, the system should start within 30 seconds.

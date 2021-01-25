@@ -98,14 +98,14 @@ services:
       - openke
 
   dbpedia-service:
-    image:  dbpedia/dbpedia-spotlight
+    image: dbpedia/dbpedia-spotlight
     container_name: dbepdia-service
     volumes:
       - spotlight-model:/opt/spotlight
     restart: unless-stopped
     ports:
       - "0.0.0.0:2222:80"
-     networks:
+    networks:
       - openke
     command: /bin/spotlight.sh en
     

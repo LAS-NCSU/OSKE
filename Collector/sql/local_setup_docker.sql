@@ -52,7 +52,7 @@ INSERT INTO domain (domain_instance_name, domain_status, effective_ts, full_name
 '    "dbpediaSpotlightAPI": "http://dbpedia-service:80/rest/annotate",'
 '    "graphAPI": "http://graph-service:9001/GraphAPI/",'
 '    "spacyAPI": "http://spacy-service:8000/spacy/",'
-'    "googleAPI": "http://google-service:9015/",'
+'    "googleAPI": "http://google-service:8000/",'
 '    "temporalAPI": "http://temporal-service:9001/temporalTagger/v1/",'
 '    "topicModelAPI": "http://topic-service:9001/topicmodel/",'
 '    "wordnetAPI": {'
