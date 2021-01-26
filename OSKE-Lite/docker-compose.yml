@@ -107,6 +107,8 @@ services:
       - "0.0.0.0:2222:80"
     networks:
       - openke
+    environment:
+      - JAVA_OPTS=-Xmx16g      
     command: /bin/spotlight.sh en
     
   geo-service:
